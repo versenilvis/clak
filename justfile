@@ -84,6 +84,10 @@ pkg-aur:
 changelog:
     git-cliff --unreleased
 
+# test installer simulation flow
+test-install mode="":
+    bash scripts/install.sh --dry-run {{mode}}
+
 # clean build artifacts
 clean:
     rm -rf build engine/target vendor clak-vendor.tar.gz clak-vendor.tar.gz.sha256
